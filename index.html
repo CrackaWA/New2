@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Far West Collective | Design for the Everyday Wanderer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    colors: { brand: { 50: '#f9f9f9', 100: '#f0f0f0', 900: '#111111' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-brand-900 antialiased overflow-x-hidden relative">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 px-6 py-5 flex items-center justify-between border-b border-transparent">
+        <div class="flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo(0,0)">
+            <svg class="transform group-hover:rotate-90 transition duration-500" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L22 12L12 22L2 12L12 2Z"/>
+            </svg>
+            <span class="text-xl font-bold tracking-tighter">Far West</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-500">
+            <a href="#collections" class="hover:text-black transition">Collections</a>
+            <a href="#lookbook" class="hover:text-black transition">Lookbook</a>
+            <a href="#essentials" class="hover:text-black transition">Essentials</a>
+        </div>
+
+        <div class="flex items-center gap-4 md:gap-6">
+            <button class="bg-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 hover:scale-105 transition transform duration-300 shadow-lg">
+                Shop Now
+            </button>
+            <button id="menu-btn" class="p-2 text-black hover:opacity-50 transition md:hidden">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-nav" class="fixed inset-0 bg-black z-[60] flex flex-col p-10 justify-between">
+        <button id="close-menu" class="absolute top-8 right-8 text-white hover:rotate-90 transition duration-300">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="flex flex-col gap-8 mt-24">
+            <a href="#collections" class="mobile-link text-white text-5xl font-bold tracking-tighter hover:text-gray-400 transition">Archival</a>
+            <a href="#lookbook" class="mobile-link text-white text-5xl font-bold tracking-tighter hover:text-gray-400 transition">Apothecary</a>
+            <a href="#essentials" class="mobile-link text-white text-5xl font-bold tracking-tighter hover:text-gray-400 transition">Home</a>
+        </div>
+    </div>
+
+    <main class="pt-48 pb-24 px-4 max-w-6xl mx-auto flex flex-col items-center text-center reveal-element reveal-up">
+        <p class="text-gray-400 font-semibold text-xs uppercase tracking-[0.25em] mb-10">Trusted by collaborators across Texas</p>
+        
+        <div class="flex flex-wrap justify-center items-center gap-10 md:gap-20 text-gray-300 mb-24 grayscale opacity-60">
+            <h2 class="text-2xl font-serif tracking-widest uppercase text-black">El Cosmico</h2>
+            <h2 class="text-xl font-bold tracking-tight text-black">Hotel Saint Vincent</h2>
+            <h2 class="text-3xl font-light italic text-black">Voutsa</h2>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tighter text-black max-w-5xl leading-[1.05] mb-10 text-balance">
+            A design collective from the universe of Liz Lambert.
+        </h1>
+        
+        <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
+            Physically intelligent creative goods embedded into your daily workflow, advancing slow-living end-to-end while expanding what your home can evoke.
+        </p>
+    </main>
+
+    <section id="collections" class="px-4 pb-32 max-w-5xl mx-auto flex flex-col gap-12">
+        
+        <div class="bg-brand-50 border border-gray-200 rounded-[2.5rem] p-8 md:p-14 interactive-card reveal-element reveal-up">
+            <div class="max-w-2xl mb-12">
+                <h3 class="text-3xl font-bold text-black mb-5 tracking-tight">Archival Robes</h3>
+                <p class="text-gray-500 text-lg leading-relaxed">
+                    Woven from vintage textiles and inspired by the high desert. Our archival robes advance comfort end-to-end, maintaining shared context across our artisan partners.
+                </p>
+            </div>
+            <div class="w-full bg-white rounded-3xl aspect-[16/9] relative overflow-hidden border border-gray-200 shadow-inner group">
+                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=2000" alt="Textiles" class="w-full h-full object-cover custom-zoom">
+                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"></div>
+                <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-full shadow-lg z-10 text-sm font-semibold text-black flex items-center gap-3">
+                    <span class="w-2 h-2 bg-black rounded-full pulse-dot"></span> Analyzing Archive...
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-brand-50 border border-gray-200 rounded-[2.5rem] p-8 md:p-14 interactive-card reveal-element reveal-up" style="transition-delay: 100ms;">
+            <div class="max-w-2xl mb-12">
+                <h3 class="text-3xl font-bold text-black mb-5 tracking-tight">Desert Apothecary</h3>
+                <p class="text-gray-500 text-lg leading-relaxed">
+                    A fundamental shift in self-care. Introducing botanical blends and desert-foraged ingredients that allow you to operate in parallel with nature.
+                </p>
+            </div>
+            <div class="w-full bg-white rounded-3xl aspect-[16/9] relative overflow-hidden border border-gray-200 shadow-inner group flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80&w=2000" alt="Apothecary" class="absolute inset-0 w-full h-full object-cover custom-zoom opacity-90">
+                <div class="absolute z-10 flex gap-4 md:gap-8 transform -translate-y-4">
+                    <div class="floating-badge bg-black text-white px-6 py-3 rounded-full shadow-2xl text-sm font-semibold flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Botanical
+                    </div>
+                    <div class="floating-badge bg-green-700 text-white px-6 py-3 rounded-full shadow-2xl text-sm font-semibold flex items-center gap-2" style="animation-delay: 1s;">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg> Sourced
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lookbook" class="px-4 pb-32 max-w-7xl mx-auto reveal-element reveal-fade">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-black mb-6 tracking-tight">Infinite aesthetic explorations</h2>
+            <p class="text-gray-500 text-xl leading-relaxed">
+                Direct a full, multi-category collection with cohesive visuals and variations, inspired by the high desert of Marfa.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[250px]">
+            <div class="col-span-2 row-span-2 rounded-3xl overflow-hidden border border-gray-200 relative group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1518164082531-9755106fce96?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold shadow-lg flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></span> Campaign View
+                </div>
+            </div>
+            <div class="col-span-1 row-span-2 rounded-3xl overflow-hidden border border-gray-200 relative group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            </div>
+            <div class="col-span-1 row-span-1 rounded-3xl overflow-hidden border border-gray-200 relative group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            </div>
+            <div class="col-span-1 row-span-1 rounded-3xl overflow-hidden border border-gray-200 relative group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            </div>
+            <div class="col-span-2 row-span-1 rounded-3xl overflow-hidden border border-gray-200 relative group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <div class="absolute bottom-6 left-6 bg-black text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+                    Desert Interiors
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="essentials" class="px-4 pb-32 max-w-6xl mx-auto flex flex-col items-center reveal-element reveal-up">
+        <div class="text-center mb-16 max-w-3xl">
+            <h2 class="text-4xl font-bold text-black mb-6 tracking-tight">Smarter essential variants</h2>
+            <p class="text-gray-500 text-xl leading-relaxed">
+                Design polished physical goods with clear benefits, durable materials, and platform-specific framing.
+            </p>
+        </div>
+
+        <div class="bg-brand-50 border border-gray-200 rounded-[3rem] p-10 md:p-20 w-full flex flex-col md:flex-row justify-center items-center gap-10 relative overflow-hidden shadow-inner">
+            <div class="absolute inset-0" style="background-image: radial-gradient(#d1d5db 1.5px, transparent 1.5px); background-size: 24px 24px; opacity: 0.5;"></div>
+
+            <div class="phone-frame z-10 bg-black rounded-[3rem] p-2.5 shadow-2xl w-72 h-[550px] border-[5px] border-gray-800 relative flex-shrink-0 bg-opacity-90 backdrop-blur-xl">
+                <div class="bg-white rounded-[2.2rem] h-full w-full overflow-hidden flex flex-col">
+                    <div class="px-6 py-5 flex justify-between items-center border-b border-gray-100">
+                        <span class="text-sm font-bold tracking-tight">Far West</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=400" class="w-full h-56 object-cover rounded-2xl mb-5 shadow-sm">
+                        <h4 class="font-bold text-base mb-1 text-black">Nomad Crossbody</h4>
+                        <p class="text-sm text-gray-500 mb-6">Hand-stitched leather. $245</p>
+                        <button class="mt-auto w-full bg-black text-white py-3.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition shadow-lg">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phone-frame z-20 bg-black rounded-[3rem] p-2.5 shadow-2xl w-72 h-[550px] border-[5px] border-gray-800 relative flex-shrink-0 md:-translate-y-8 bg-opacity-90 backdrop-blur-xl">
+                <div class="bg-gray-900 rounded-[2.2rem] h-full w-full overflow-hidden flex flex-col relative">
+                    <img src="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute top-5 left-0 right-0 px-6 flex justify-between z-20">
+                        <span class="text-sm font-bold text-white tracking-tight drop-shadow-md">Far West</span>
+                    </div>
+                    <div class="absolute bottom-10 left-0 right-0 px-6 text-center z-20">
+                        <h4 class="font-bold text-white text-3xl mb-4 drop-shadow-lg tracking-tight">Rest. Refined.</h4>
+                        <button class="bg-white text-black px-8 py-3.5 rounded-full text-sm font-bold shadow-xl hover:scale-105 transition transform">Shop Sleep</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phone-frame z-10 bg-black rounded-[3rem] p-2.5 shadow-2xl w-72 h-[550px] border-[5px] border-gray-800 relative flex-shrink-0 bg-opacity-90 backdrop-blur-xl">
+                <div class="bg-white rounded-[2.2rem] h-full w-full overflow-hidden flex flex-col">
+                    <div class="px-6 py-5 flex justify-between items-center border-b border-gray-100">
+                        <span class="text-sm font-bold tracking-tight">Far West</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col gap-5">
+                        <h4 class="font-bold text-base text-black">Shop Essentials</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=200" class="h-28 w-full object-cover rounded-xl shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80&w=200" class="h-28 w-full object-cover rounded-xl shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=200" class="h-28 w-full object-cover rounded-xl shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80&w=200" class="h-28 w-full object-cover rounded-xl shadow-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 pb-32 max-w-4xl mx-auto flex flex-col items-start reveal-element reveal-up">
+        <h2 class="text-4xl font-bold text-black mb-12 tracking-tight">Business stories</h2>
+        
+        <div class="flex flex-col gap-8 w-full">
+            <div class="bg-white border border-gray-200 rounded-[2.5rem] p-10 md:p-14 shadow-sm hover:shadow-xl transition duration-500">
+                <div class="flex items-center gap-5 mb-8">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" class="w-16 h-16 rounded-full object-cover border border-gray-200">
+                    <div>
+                        <h4 class="font-bold text-black text-lg">Elena R.</h4>
+                        <p class="text-gray-500 text-sm">Founder of The Textile Project</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xl leading-relaxed italic font-light">
+                    "Far West allows us to embed high-desert design directly into our production pipeline in a way that strengthens storytelling, protects artisanal performance, and accelerates innovation in slow fashion."
+                </p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-[2.5rem] p-10 md:p-14 shadow-sm hover:shadow-xl transition duration-500">
+                <div class="flex items-center gap-5 mb-8">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150" class="w-16 h-16 rounded-full object-cover border border-gray-200">
+                    <div>
+                        <h4 class="font-bold text-black text-lg">Marcus V.</h4>
+                        <p class="text-gray-500 text-sm">CEO of Marfa Hospitality Group</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xl leading-relaxed italic font-light">
+                    "We believe the next era of hospitality will be defined by how intelligently we integrate authentic archival elements into the core of our spaces. It expands what our rooms can evoke without diluting cultural nuance."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white pt-24 pb-12 px-6 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-16 mb-24">
+            <div class="md:max-w-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2L22 12L12 22L2 12L12 2Z"/></svg>
+                    <span class="text-2xl font-bold tracking-tighter">Far West</span>
+                </div>
+                <p class="text-gray-400 text-base leading-relaxed">
+                    A design collective from the universe of Liz Lambert. High desert essentials curated for the everyday wanderer.
+                </p>
+            </div>
+            <div class="flex gap-16 md:gap-32">
+                <div class="flex flex-col gap-5">
+                    <h5 class="font-bold text-white text-sm tracking-widest uppercase mb-2">Collections</h5>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Archival Robes</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Desert Apothecary</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Home Goods</a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <h5 class="font-bold text-white text-sm tracking-widest uppercase mb-2">Explore</h5>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Our Story</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Visit Marfa</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto text-gray-500 text-sm border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span>&copy; 2026 Far West Collective. All rights reserved.</span>
+            <div class=
